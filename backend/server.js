@@ -14,6 +14,13 @@ const PORT = Number(process.env.PORT || 3001);
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
+app.get("/", (_req, res) => {
+  res.json({
+    ok: true,
+    message: "Precision Scalp Backend is running",
+  });
+});
+
 app.get("/health", (_req, res) => {
   res.json({
     ok: true,
