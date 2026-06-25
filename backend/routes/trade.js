@@ -68,7 +68,7 @@ router.post("/", async (req, res) => {
     let tp = Number(takeProfit);
 
     if (!Number.isFinite(sl) || !Number.isFinite(tp)) {
-      const defaultRisk = entry * 0.003; // 0.30%
+      const defaultRisk = entry * 0.003;
       sl = direction === "LONG" ? entry - defaultRisk : entry + defaultRisk;
       tp = direction === "LONG" ? entry + defaultRisk * 2 : entry - defaultRisk * 2;
     }
