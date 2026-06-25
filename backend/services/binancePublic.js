@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const API_BASE = process.env.BINANCE_API_BASE || "https://api.binance.com";
 
 async function getJson(url) {
