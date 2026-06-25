@@ -19,7 +19,7 @@ export async function callOpenRouter({
   }
 
   const payload = {
-    model: model || process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini",
+    model: model || process.env.OPENROUTER_MODEL || "anthropic/claude-sonnet-4.6",
     messages,
     temperature,
     top_p,
