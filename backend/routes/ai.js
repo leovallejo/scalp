@@ -78,7 +78,7 @@ router.post("/", async (req, res) => {
     const prompt = buildTradingPrompt(body);
 
     const result = await callOpenRouter({
-      model: process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini",
+      model: process.env.OPENROUTER_MODEL || "anthropic/claude-sonnet-4.6",
       messages: [
         {
           role: "system",
