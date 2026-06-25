@@ -14,6 +14,7 @@ const PORT = Number(process.env.PORT || 3001);
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
+// Root route so visiting "/" does not show "Cannot GET /"
 app.get("/", (_req, res) => {
   res.json({
     ok: true,
@@ -21,6 +22,7 @@ app.get("/", (_req, res) => {
   });
 });
 
+// Health check route
 app.get("/health", (_req, res) => {
   res.json({
     ok: true,
@@ -29,10 +31,12 @@ app.get("/health", (_req, res) => {
   });
 });
 
+// API routes
 app.use("/api/ai-analysis", aiRoute);
 app.use("/api/backtest", backtestRoute);
 app.use("/api/trade", tradeRoute);
 
+// Error handler
 app.use((err, _req, res, _next) => {
   console.error("[SERVER ERROR]", err);
   res.status(500).json({
