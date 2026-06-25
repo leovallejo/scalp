@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 function sleep(ms) {
