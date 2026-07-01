@@ -1,0 +1,29 @@
+# Core dependencies - pinned for Linux compatibility
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+scipy==1.13.1
+joblib==1.4.2
+threadpoolctl==3.5.0
+
+# Web framework
+flask==3.0.3
+flask-cors==6.0.0
+werkzeug==3.0.3
+
+# HTTP client
+requests==2.32.3
+urllib3==2.2.2
+certifi==2024.7.4
+charset-normalizer==3.3.2
+idna==3.7
+
+# Utilities
+python-dotenv==1.0.1
+tenacity==8.5.0
+
+# Production server
+gunicorn==23.0.0
+
+# Type hints (optional but recommended)
+typing-extensions==4.12.2
